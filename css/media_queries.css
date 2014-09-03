@@ -1,0 +1,23 @@
+/* Media Queries */
+
+/* Global */
+@media only screen and (max-width: 40em) {
+    .heading {
+        text-align: center;
+    }
+}
+
+/* index.php */
+@media only screen and (max-width: 40em) {
+    #loginContainer {
+        margin-top: 5px;
+        width: 100%;
+    }
+}
+
+/* user_home.php */
+@media only screen and (max-width: 40em) {
+    p.logout {
+        text-align: center;
+    }
+}

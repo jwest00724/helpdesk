@@ -3,13 +3,28 @@
 /* Main stylesheet */
 
 /* Global */
-
 html,
 body {
     background-color: #F8F8F8;
+    height: auto;
 }
-/* index.php */
+h1.logo {
+    font-family: 'Bree Serif', serif;
+    font-size: 3.25em;
+}
+a {
+    color: #21AAE1;
+}
+.button {
+    padding: 7px 18px 7px 18px;
+    background-color: #21AAE1;
+}
 
+p.footer {
+    text-align: center;   
+}
+
+/* index.php */
 #loginContainer {
     margin-top: 150px;
     width: 75%;
@@ -17,22 +32,8 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-/* max-width 640px, mobile-only styles, use when QAing mobile issues */
 
-h1.logo {
-    font-family: 'Bree Serif', serif;
-    font-size: 3.25em;
-}
-/* Media Queries */
-
-/* index.php */
-
-@media only screen and (max-width: 40em) {
-    #loginContainer {
-        margin-top: 5px;
-        width: 100%;
-    }
-    .heading {
-        text-align: center;
-    }
+/* user_home.php */
+a.menu {
+    margin-top: 15px;
 }
