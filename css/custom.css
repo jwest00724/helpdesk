@@ -1,0 +1,38 @@
+/* Supported - Bishop Justus IT Support Ticket System - Ben Crisp 2014 - ben.crisp22@gmail.com */
+
+/* Main stylesheet */
+
+/* Global */
+
+html,
+body {
+    background-color: #F8F8F8;
+}
+/* index.php */
+
+#loginContainer {
+    margin-top: 150px;
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+h1.heading {
+    font-family: 'Bree Serif', serif;
+    font-size: 3.25em;
+}
+/* Media Queries */
+
+/* index.php */
+
+@media only screen and (max-width: 40em) {
+    #loginContainer {
+        margin-top: 5px;
+        width: 100%;
+    }
+    div.heading {
+        text-align: center;
+    }
+}
