@@ -1,3 +1,4 @@
+<!--
 <footer>
     <div class="row">
         <div class="12-small columns">
@@ -5,12 +6,12 @@
         </div>
     </div>
 </footer>
+-->
 <!-- End Page Content -->
 
 <!-- Call in jquery and js -->
 <script src="js/vendor/jquery.js"></script>
 <script src="js/foundation.min.js"></script>
-<script src="js/sticky_footer.js"></script>
 <script>
     $(document).foundation();
 </script>
