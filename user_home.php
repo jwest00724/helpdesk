@@ -11,6 +11,7 @@
         <ul class="inline-list">
             <li><a href="#" class="menu hide-for-small-only">Ticket History</a>
             </li>
+            <!-- TODO: Create logout.php -->
             <li><a href="logout.php" class="menu hide-for-small-only">Logout</a>
             </li>
         </ul>
@@ -32,11 +33,14 @@
             <dd class="accordion-navigation active">
                 <a href="#panel1">Submit a new support ticket</a>
                 <div id="panel1" class="content">
+                    <!-- TODO: set up form to submit to db -->
+                    <!-- TODO: form validation -->
                     <form name="submitTicket" action="submit_ticket.php" method="post">
                         <div class="row">
                             <div class="large-12 columns">
                                 <label>Subject
                                     <select name="priority">
+                                        <!-- TODO: link selection box to db -->
                                         <option value="" disabled selected>Placehold</option>
                                     </select>
                                 </label>
@@ -79,6 +83,7 @@
                         </div>
                         <div class="row">
                             <div class="large-12 columns">
+                                <!-- TODO: Ticket submission message (tell user they will be emailed when the ticket has been close) -->
                                 <input class="button" type="submit" value="Submit" />
                             </div>
                         </div>
@@ -87,6 +92,7 @@
             </dd>
             <dd class="accordion-navigation">
                 <a href="#panel2">View the knowledge base</a>
+                <!-- TODO: Set up to pull knowledge base entries from db -->
                 <div id="panel2" class="content">
                     Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </div>
