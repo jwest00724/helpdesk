@@ -1,7 +1,4 @@
-<?php 
-$pageName="Helpdesk - Login"; 
-include 'header.php'; 
-?>
+<?php $pageName="Helpdesk - Login" ; include 'header.php'; ?>
 
 <!-- Begin Page Content -->
 
@@ -13,6 +10,8 @@ include 'header.php';
             <h4 class="subheader">Bishop Justus IT Support System</h4>
         </div>
         <!-- Right (bottom on small) - login form -->
+        <!-- TODO: Set up PHP login system (login.php) -->
+        <!-- TODO: form validation -->
         <div class="small-12 medium-5 large-5 columns login" id="">
             <form>
                 <div class="row">
@@ -27,7 +26,7 @@ include 'header.php';
                 </div>
                 <div class="row">
                     <div class="small-12 medium-12 small-centered medium-uncentered columns">
-                        <a href="#" class="button postfix">Login</a>
+                        <input class="button" type="submit" value="Login" />
                     </div>
                 </div>
             </form>
