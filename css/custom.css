@@ -19,7 +19,7 @@ body {
 }
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 
-h1.heading {
+h1.logo {
     font-family: 'Bree Serif', serif;
     font-size: 3.25em;
 }
@@ -32,7 +32,7 @@ h1.heading {
         margin-top: 5px;
         width: 100%;
     }
-    div.heading {
+    .heading {
         text-align: center;
     }
 }

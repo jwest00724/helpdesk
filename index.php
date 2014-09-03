@@ -16,13 +16,14 @@
 </head>
 
 <body>
+    
     <!-- Begin Page Content -->
 
     <div class="row">
         <div id="loginContainer">
             <!-- Left (top on small) - Headings etc -->
             <div class="small-12 medium-7 large-7 columns login heading" id="">
-                <h1 class="heading">Helpdesk</h1>
+                <h1 class="logo">Helpdesk</h1>
                 <h4 class="subheader">Bishop Justus IT Support System</h1>
             </div>
             <!-- Right (bottom on small) - login form -->
