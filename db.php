@@ -7,7 +7,7 @@ $db_user = 'helpdesk';
 $db_passwd = '1024768';
 
 // Connect to database
-$mysqli = new mysqli($db_host, $db_user, $db_passwd, $db_name);
+$conn = new mysqli($db_host, $db_user, $db_passwd, $db_name);
 
 // Check for errors, print if any
 if (mysqli_connect_errno()) {
