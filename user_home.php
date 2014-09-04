@@ -1,7 +1,4 @@
-<?php
-$pageName = 'Helpdesk - Home';
-include 'header.php';
-?>
+<?php $pageName='Helpdesk - Home' ; include 'header.php'; ?>
 <!-- Begin Page Content -->
 <!-- Logo and logout + ticket history buttons -->
 <div class="row">
