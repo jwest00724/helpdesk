@@ -24,6 +24,20 @@
 <!-- Begin Page Content -->
 
 <div class="row">
+    <!-- Show error message if username/password is incorrect -->
+    <?php if(isset($_GET['invalid'])) { echo 
+    '<div class="row">
+        <div class="small-12 columns">
+            <div data-alert class="alert-box alert error hide-for-small-only">
+                Incorrect username or password!
+                <a href="#" class="close">&times;</a>
+            </div>
+            <div data-alert class="alert-box alert mobile-error show-for-small-only">
+                Incorrect username or password!
+                <a href="#" class="close">&times;</a>
+            </div>
+        </div>
+    </div>';}?>
     <div id="loginContainer">
         <!-- Left (top on small) - Headings etc -->
         <div class="small-12 medium-7 large-7 columns login heading" id="">
