@@ -28,11 +28,11 @@
     <?php if(isset($_GET['invalid'])) { echo 
     '<div class="row">
         <div class="small-12 columns">
-            <div data-alert class="alert-box alert error hide-for-small-only">
+            <div data-alert class="alert-box alert top hide-for-small-only">
                 Incorrect username or password!
                 <a href="#" class="close">&times;</a>
             </div>
-            <div data-alert class="alert-box alert mobile-error show-for-small-only">
+            <div data-alert class="alert-box alert show-for-small-only">
                 Incorrect username or password!
                 <a href="#" class="close">&times;</a>
             </div>
