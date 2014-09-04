@@ -1,5 +1,7 @@
-<?php $pageName="Helpdesk - Home" ; include 'header.php'; ?>
-
+<?php
+$pageName = 'Helpdesk - Home';
+include 'header.php';
+?>
 <!-- Begin Page Content -->
 <!-- Logo and logout + ticket history buttons -->
 <div class="row">
@@ -11,7 +13,6 @@
         <ul class="inline-list">
             <li><a href="#" class="menu hide-for-small-only">Ticket History</a>
             </li>
-            <!-- TODO: Create logout.php -->
             <li><a href="logout.php" class="menu hide-for-small-only">Logout</a>
             </li>
         </ul>
