@@ -45,7 +45,7 @@
             <h4 class="subheader">Bishop Justus IT Support System</h4>
         </div>
         <!-- Right (bottom on small) - login form -->
-        <!-- TODO: form validation -->
+        <!-- FUTURE: more advanced form validation -->
         <div class="small-12 medium-5 large-5 columns login" id="">
             <form action="login.php" method="post">
                 <div class="row">
@@ -60,7 +60,7 @@
                 </div>
                 <div class="row">
                     <div class="small-12 medium-12 small-centered medium-uncentered columns">
-                        <input class="button" type="submit" value="Login" />
+                        <input class="button radius" type="submit" value="Login" />
                     </div>
                 </div>
             </form>
