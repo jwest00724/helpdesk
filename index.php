@@ -50,7 +50,7 @@
             <form action="login.php" method="post">
                 <div class="row">
                     <div class="small-12 medium-12 small-centered medium-uncentered columns">
-                        <input type="text" name="username" placeholder="Username" />
+                        <input type="text" name="username" autofocus="autofocus" placeholder="Username" />
                     </div>
                 </div>
                 <div class="row">
