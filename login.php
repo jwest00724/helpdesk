@@ -32,7 +32,7 @@ $hash = hash('sha256', $userData['salt'] . hash('sha256', $password) );
 
 if($hash != $userData['password']) // Incorrect password. So, redirect to login_form again.
 {
-    header('Location: index.php');
+    header('Location: index.php?invalid');
 }else{ // Redirect to home page after successful login.
     session_regenerate_id();
     $_SESSION['sess_user_id'] = $userData['userID'];
