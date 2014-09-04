@@ -33,10 +33,11 @@ p.footer {
     margin-right: auto;
 }
 
-.error {
+.top {
     position: fixed;
     width: 100%;
-    max-width: 940px; 
+    max-width: 940px;
+    z-index: 1;
 }
 
 /* user_home.php */
