@@ -3,7 +3,7 @@ ob_start();
 session_start();
 
 // Recieve login values from form. store in vars.
-$username = $_POST['username'];
+$username = htmlspecialchars($_POST['username']);
 $password = $_POST['password'];
 
 // Connect to db.
