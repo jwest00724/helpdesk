@@ -1,5 +1,19 @@
 <?php $pageName='Helpdesk - Home' ; include 'header.php'; ?>
 <!-- Begin Page Content -->
+<!-- Succcess ALert -->
+<?php if(isset($_GET['success'])) { echo 
+    '<div class="row">
+        <div class="small-12 columns">
+            <div data-alert class="alert-box success top hide-for-small-only">
+                Ticket Submitted!
+                <a href="#" class="close">&times;</a>
+            </div>
+            <div data-alert class="alert-box success show-for-small-only">
+                Ticket Submitted!
+                <a href="#" class="close">&times;</a>
+            </div>
+        </div>
+    </div>';}?>
 <!-- Logo and logout + ticket history buttons -->
 <div class="row">
     <div class="small-12 large-9 columns">
@@ -24,7 +38,7 @@
         </p>
     </div>
 </div>
-<!-- Help Options -->
+<!-- Accordion navigation -->
 <div class="row">
     <div class="small-12 columns">
         <dl class="accordion" data-accordion="">
@@ -82,7 +96,7 @@
                         <div class="row">
                             <div class="large-12 columns">
                                 <!-- TODO: Ticket submission message (tell user they will be emailed when the ticket has been close) -->
-                                <input class="button" type="submit" value="Submit" />
+                                <input class="button radius" type="submit" value="Submit" />
                             </div>
                         </div>
                     </form>
