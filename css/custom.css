@@ -33,6 +33,12 @@ p.footer {
     margin-right: auto;
 }
 
+.error {
+    position: fixed;
+    width: 100%;
+    max-width: 940px; 
+}
+
 /* user_home.php */
 a.menu {
     margin-top: 15px;
