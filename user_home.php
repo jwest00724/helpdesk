@@ -1,11 +1,19 @@
 <?php $pageName='Helpdesk - Home' ; include 'header.php'; ?>
+<!-- Get subjects from db -->
+<?php
+include 'db.php';
+$subjectQuery = "SELECT subject FROM subjects";
+$subjectResult = mysqli_query($conn,$subjectQuery) or die("Error: ".mysqli_error($conn));
+mysqli_close($conn);
+?>
+
 <!-- Begin Page Content -->
 <!-- Succcess ALert -->
 <?php if(isset($_GET['success'])) { echo 
     '<div class="row">
         <div class="small-12 columns">
             <div data-alert class="alert-box success top hide-for-small-only">
-                Ticket Submitted!
+                Ticket Submitted! You will be notified via email when the ticket has been closed.
                 <a href="#" class="close">&times;</a>
             </div>
             <div data-alert class="alert-box success show-for-small-only">
@@ -42,26 +50,28 @@
 <div class="row">
     <div class="small-12 columns">
         <dl class="accordion" data-accordion="">
-            <dd class="accordion-navigation active">
+            <dd class="accordion-navigation">
                 <a href="#panel1">Submit a new support ticket</a>
                 <div id="panel1" class="content">
-                    <!-- TODO: set up form to submit to db -->
                     <!-- TODO: form validation -->
-                    <form name="submitTicket" action="submit_ticket.php" method="post">
+                    <form name="submitTicket" data-abide action="submit_ticket.php" method="post">
                         <div class="row">
                             <div class="large-12 columns">
-                                <label>Subject
-                                    <select name="priority">
-                                        <!-- TODO: link selection box to db -->
-                                        <option value="" disabled selected>Placehold</option>
-                                    </select>
+                                <label>Subject <small>required</small>
+                                    <?php $dropdown = "<select required name='subject'>";
+                                    while($subjectArray = mysqli_fetch_assoc($subjectResult)) {
+                                        $dropdown .= "\r\n<option value=''>Please select</option><option value='{$subjectArray['subject']}'>{$subjectArray['subject']}</option>";
+                                    }
+                                    $dropdown .= "\r\n</select>";
+                                    echo $dropdown; ?>
                                 </label>
+                                <small class="error">Please choose a subject. If there is no suitable subject, just select "other".</small>
                             </div>
                         </div>
                         <div class="row">
                             <div class="large-6 columns">
-                                <label>Priority
-                                    <select name="priority">
+                                <label>Priority <small>required</small>
+                                    <select required name="priority">
                                         <option value="" disabled selected>Please select</option>
                                         <option value="Very High">Very High</option>
                                         <option value="High">High</option>
@@ -69,33 +79,34 @@
                                         <option value="Low">Low</option>
                                     </select>
                                 </label>
+                                <small class="error">You must choose a select a priority level.</small>
                             </div>
                             <div class="large-6 columns">
                                 <label>Room Nuber
-                                    <input type="text" name="room" />
+                                    <input type="text" pattern="bj_room_number" name="room" />
+                                </label>
+                                <small class="error">Invalid room number!</small>
                             </div>
-                            </label>
                         </div>
                         <div class="row">
                             <div class="large-12 columns">
                                 <label>Description
-                                    <textarea name="description" rows="16" placeholder="Enter further deatils of your issue"></textarea>
+                                    <textarea name="description" rows="16" placeholder="Enter specific details of your issue"></textarea>
                                 </label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="large-12 columns">
-                                <input name="ticketOwner" type="hidden" value="">
+                                <input name="ticketOwner" type="hidden" value="<?php echo $_SESSION['sess_username']; ?>">
                             </div>
                         </div>
                         <div class="row">
                             <div class="large-12 columns">
-                                <input name="email" type="hidden" value="">
+                                <input name="ticketOwnerEmail" type="hidden" value="<?php echo $_SESSION['sess_user_email']; ?>">
                             </div>
                         </div>
                         <div class="row">
                             <div class="large-12 columns">
-                                <!-- TODO: Ticket submission message (tell user they will be emailed when the ticket has been close) -->
                                 <input class="button radius" type="submit" value="Submit" />
                             </div>
                         </div>
@@ -104,9 +115,21 @@
             </dd>
             <dd class="accordion-navigation">
                 <a href="#panel2">View the knowledge base</a>
-                <!-- TODO: Set up to pull knowledge base entries from db -->
                 <div id="panel2" class="content">
-                    Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <?php 
+                    include 'db.php'; // Connect to database
+                    $knowledgeQuery = "SELECT knowledgeID, knowledgeTitle, knowledge FROM knowledge_base ;"; // Query knowledge_base table
+                    
+                    $knowledgeResult = mysqli_query($conn,$knowledgeQuery) or die("Error: ".mysqli_error($conn)); // Run query
+                    
+                    while($knowledgeArray = mysqli_fetch_array($knowledgeResult)) // Put returned rows into array
+                    {
+                        echo "<h3>" . $knowledgeArray['knowledgeTitle'] . "</h3>"; // Echo knowledgeTitle as entry heading
+                        echo $knowledgeArray['knowledge']; // Echo knowledge as entry body text
+                        echo "<hr></hr>"; // Insert divider
+                    }
+                    mysqli_close($conn); // Close conn
+                    ?>
                 </div>
             </dd>
         </dl>
