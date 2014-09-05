@@ -13,6 +13,13 @@
 <script src="js/vendor/jquery.js"></script>
 <script src="js/foundation.min.js"></script>
 <script>
-    $(document).foundation();
+    $(document)
+    .foundation({
+        abide : {
+            patterns: {
+                bj_room_number: /(G|F|S{3})(\d{3})$/
+            }
+        }
+    });
 </script>
 </body>
