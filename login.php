@@ -37,6 +37,7 @@ if($hash != $userData['password']) // Incorrect password. So, redirect to login_
     session_regenerate_id();
     $_SESSION['sess_user_id'] = $userData['userID'];
     $_SESSION['sess_username'] = $userData['username'];
+    $_SESSION['sess_user_email'] = $userData['email'];
     session_write_close();
     header('Location: user_home.php');
 }
