@@ -33,13 +33,6 @@ p.footer {
     margin-right: auto;
 }
 
-.top {
-    position: fixed;
-    width: 100%;
-    max-width: 940px;
-    z-index: 1;
-}
-
 /* user_home.php */
 a.menu {
     margin-top: 15px;
