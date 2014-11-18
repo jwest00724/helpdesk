@@ -8,22 +8,6 @@ if(!isset($_SESSION['sess_user_id']) || (trim($_SESSION['sess_user_id']) == ''))
     exit();
 }
 
-// set timeout period in seconds
-$inactive = 1800; // (30 mins)
-
-// check to see if $_SESSION['timeout'] is set
-if(isset($_SESSION['timeout']) ) {
-    $session_life = time() - $_SESSION['timeout'];
-    if($session_life > $inactive)
-    { 
-        // go to login page when idle
-        session_destroy(); 
-        header("Location: index.php?timeout");
-        exit();
-    }
-}
-$_SESSION['timeout'] = time();
-
 ?>
 <!doctype html>
 <html class="no-js" lang="en">

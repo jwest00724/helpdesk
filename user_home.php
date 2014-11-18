@@ -30,7 +30,7 @@ mysqli_close($conn);
     </div>
     <div class="small-12 large-3 columns">
         <ul class="inline-list">
-            <li><a href="#" class="menu hide-for-small-only">Ticket History</a>
+            <li><a href="ticket_history.php" class="menu hide-for-small-only">Ticket History</a>
             </li>
             <li><a href="logout.php" class="menu hide-for-small-only">Logout</a>
             </li>
@@ -42,7 +42,7 @@ mysqli_close($conn);
     <div class="small-12 columns">
         <p class="logout show-for-small-only"><a href="logout.php">Logout</a>
         </p>
-        <p class="logout show-for-small-only"><a href="#">Ticket History</a>
+        <p class="logout show-for-small-only"><a href="ticket_history.php">Ticket History</a>
         </p>
     </div>
 </div>
@@ -79,7 +79,7 @@ mysqli_close($conn);
                                         <option value="Low">Low</option>
                                     </select>
                                 </label>
-                                <small class="error">You must choose a select a priority level.</small>
+                                <small class="error">You must choose a priority level.</small>
                             </div>
                             <div class="large-6 columns">
                                 <label>Room Nuber

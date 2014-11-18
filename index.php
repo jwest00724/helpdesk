@@ -34,16 +34,6 @@
             </div>
         </div>
     </div>';}?>
-    <!-- Show error message if user has been loged out due to inactivity -->
-    <?php if(isset($_GET['timeout'])) { echo 
-    '<div class="row">
-        <div class="small-12 columns">
-            <div data-alert class="alert-box alert">
-                You have been logged out due to inactivity. Please log back in.
-                <a href="#" class="close">&times;</a>
-            </div>
-        </div>
-    </div>';}?>
     <div id="loginContainer">
         <!-- Left (top on small) - Headings etc -->
         <div class="small-12 medium-7 large-7 columns login heading" id="">
